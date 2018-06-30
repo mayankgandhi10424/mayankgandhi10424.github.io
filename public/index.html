@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>ChIzZz</title>
+
+<!--
+
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+
+-->
+  	<!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<!--custom css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+</head>
+
+<body ng-app="myApp">
+	<div >
+		<nav id="navBar" class=" indigo darken-3">
+		    <div class="nav-wrapper">
+		      <a href="#/home" class="brand-logo left">ChiZzZ</a>
+		      <ul id="nav-mobile" class="right">
+		        <li ng-show="authenticated">
+		        	<a ng-click="logout()">{{current_user}}</a>
+		        </li>
+		      
+		        <li ng-hide="authenticated"><a href="#/registerLogin">Register/Login</a></li>
+		      </ul>
+		    </div>
+	  	</nav>
+	</div>
+
+	<div id="Posts" class='container'>
+
+	 	<div ng-view></div>
+	</div>
+
+	<!--Import jQuery before materialize.js-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+
+	<script src="js/myApp/myApp.js"></script>
+
+	<script src="js/myApp/controllers/postControl.js"></script>
+	<script src="js/myApp/controllers/myControl.js"></script>
+	<script src="js/myApp/controllers/regLogControl.js"></script>
+	<script src="js/myApp/route.js"></script>
+	<script src="js/myApp/postService.js"></script>
+	
+     <!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+	<script src="https://use.fontawesome.com/fee98afe9c.js"></script>
+
+<!--
+	<script src="js/angular.min.js"></script>
+
+	<script src="js/angular-route.js"></script>
+
+	<script src="materialize/js/materialize.min.js"></script>
+-->
+
+</body>
+</html>

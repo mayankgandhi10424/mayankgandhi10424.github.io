@@ -1,0 +1,120 @@
+body{
+	background-color: #e8eaf6;
+	padding-bottom: 30px;
+}
+
+#comment-stream .section {
+	background-color: #f6f7f9 ;
+	padding: 10px 20px;
+	margin-bottom: 2px;
+}
+#post-stream .section {
+	background-color: #ffffff;
+	padding: 10px 20px;
+	margin-bottom: 2px;
+}
+
+.Text{
+	padding: 20px;
+}
+
+a:hover ,span:hover{
+	cursor: pointer;
+}
+
+span{
+	margin-right: 30px;
+}
+
+#commento{
+	margin-bottom: 10px;
+}
+
+#post{
+	padding: 20px 40px;
+	margin-bottom: 20px;
+	background-color: #ffffff;
+}
+
+#Posts{
+	padding-top: 20px;
+}
+
+#postForm{
+	padding: 10px 20px 50px 20px;
+	margin-bottom: 40px;
+	margin-top: 10px;
+	background-color: #ffffff;
+}
+
+#navBar{
+	padding-left: 20px;
+}
+
+.font-medium{
+	font-size: x-large;
+}
+
+.greyColor{
+	color: #607d8b;
+}
+
+.blueColor{
+	color: #2196f3;
+}
+
+.navy-blue{
+	color: #283593;
+}
+
+#error_message{
+	color: red;
+	background-color: #ffffff;
+}
+
+.width-14{
+	width: 14px;
+}
+
+#register{
+	background-color: #ffffff;
+	padding: 40px;
+	margin: 10px;
+}
+
+#login{
+	background-color: #ffffff;
+	padding: 40px;
+	margin: 10px;
+}
+
+#text_fb_g{
+	text-align: center;
+	padding: 20px;
+}
+
+.OR{
+	text-align: center;
+	font-size: large;
+	color: #000000;
+	padding: 20px;	
+}
+
+a{
+	margin-bottom: 10px;
+}
+
+.margin-right-20{
+	margin-right: 20px;
+}
+
+/* label color */
+.input-field label {
+ color: #283593 !important;
+}
+
+/* label underline focus color */
+.input-field input textarea {
+ border-bottom: 1px solid #283593 !important;
+ box-shadow: 0 1px 0 0 #283593 !important;
+}

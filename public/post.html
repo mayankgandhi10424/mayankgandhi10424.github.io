@@ -1,0 +1,49 @@
+<div id="postForm" ng-show="authenticated" class="z-depth-2">
+  <form ng-Submit="post()">
+
+    <div class="Text">
+      <a class="font-medium  navy-blue">{{current_user}} </a> 
+      <div class="input-field ">
+        <textarea id="textarea" required class="materialize-textarea navy-blue" length="120" ng-model="newPost.text"></textarea>
+        <label for="textarea">Whats on you're mind!</label>
+      </div>
+    </div>
+
+    <button class="btn  waves-effect waves-light right indigo darken-4" type="submit" name="action">Chizzz
+      <i class="tiny material-icons right">send</i>
+    </button>
+
+  </form>
+
+</div>
+
+<div id="post-stream">
+
+  <span id="posto" class="greyColor" >
+    <i class="tiny material-icons">question_answer</i>
+    <STRONG> Posts</STRONG>
+  </span>
+
+  <div ng-repeat="post in allPost | orderBy:'-created_at'" > 
+    <div class="section z-depth-2" >
+      <p>
+        <a class="font-medium  navy-blue">{{post.created_by}} </a> 
+        <medium> {{post.text}}</medium> 
+        <a ng-show="authenticated" ng-click="delete(post)" class="right greyColor tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip"><i class="tiny material-icons width-14">clear</i></a>
+      </p>
+
+      <div class="divider"></div>
+      <p class="greyColor"> 
+        <span ng-show="authenticated" ng-click="like(post)" ><i class="tiny material-icons">thumb_up</i> Like</span>
+        <span ><a class="greyColor" href="#/posts/{{post._id}}"><i class="tiny material-icons">comment</i>  Comment  </a>  </span>
+        <small class="right">{{post.created_at | date:"h:mma 'on' MMM d, y"}}</small>
+      </p>
+
+      <div class="divider"></div>
+      <p >
+        <span class="blueColor"><i class="tiny material-icons">thumb_up</i> {{post.likes}}</span>
+        <span class="right"><a class="greyColor" href="#/posts/{{post._id}}">{{post.comments.length}} Comments</a></span>
+      </p>
+    </div>
+  </div>
+</div>
