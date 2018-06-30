@@ -1,0 +1,34 @@
+<!-- signup -->
+<div class="max-width-300 margin-auto">
+  <div class="panel opacity-9 panel-success">
+    <div class="green panel-heading big center">Sign Up</div>
+    <div class="panel-body">
+      <form class="form-horizontal padding-20">
+        <div class="form-group">
+          <label class="text-muted" for="email">Email:</label>
+            <input type="email" class="form-control padding-20" id="email" onkeyup="validateEmail()" onfocus="$(this).select()" value="m@gmail.com" placeholder="Enter email"/>
+            <p id="helpblockemail" class="form-text text-muted text-danger padding-5"></p>
+        </div>
+        <div class="form-group">
+          <label class="text-muted" for="pwd">Password:</label>
+            <input type="password" class="form-control padding-20" onkeyup="validatePassword()" onfocus="$(this).select()" id="pwd" value="abcde@" placeholder="Enter password"/>
+            <p id="helpblockpassword" class="form-text text-muted text-danger padding-5"> </p>
+        </div>
+        <div class="form-group">
+          <label class="text-muted" for="name">Name:</label>
+            <input type="text" class="form-control padding-20" id="name" onkeyup="validateName()" value="name" onfocus="$(this).select()" placeholder="Enter name"/>
+            <p id="helpblockname" class="form-text text-muted text-danger padding-5"></p>
+        </div>
+        <div class="form-group">
+          <label class="text-muted" for="age">Age:</label>
+            <input type="number" class="form-control height-40" onkeyup="validateAge()" id="age" value="18" onfocus="$(this).select()" placeholder="Enter Age"/>
+            <p id="helpblockage" class="form-text text-muted text-danger padding-5"></p>
+        </div>
+        <div class="form-group">
+            <button id="onsignup" class="btn green btn-lg width-100"> Sign Up <span class="glyphicon glyphicon-user"></span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- signup end -->
