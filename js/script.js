@@ -69,14 +69,18 @@ var onTableLoad = function(){
 });
 };
 var onSignupLoad = function(){
-  $('#onsignup').click(function(){
+  $('#signupform').submit(function(){
     if(validateSignup()){
       console.log('Valid Credentials');
       $('#helpblock').text('Valid Credentials');
-      var sure = confirm("Are you sure you want to submit");
-      if(!sure){
-        return;
-      }
+      // var sure = confirm("Are you sure you want to submit");
+
+      //   console.log(sure);
+
+      // if(!sure){
+      //   console.log("not sure");
+      //   return;
+      // }
       var newUser = {
         email: $('#email').val(),
         password: $('#pwd').val(),
@@ -88,6 +92,7 @@ var onSignupLoad = function(){
       loadLogin();
     }
   });
+  return false;
 };
 var onLoginLoad = function(){
   $('#onlogin').click(function(){
@@ -140,7 +145,7 @@ var validatePassword = function(){
 }
 var validateName = function(){
   var name = $('#name').val();
-  var pattern = /^[a-zA-Z]{3,20}$/;
+  var pattern = /^[a-zA-Z\s\.]{3,20}$/;
   var result = name.match(pattern);
   // console.log(result);
   if(result != null){
