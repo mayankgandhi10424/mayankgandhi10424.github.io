@@ -69,7 +69,8 @@ var onTableLoad = function(){
 });
 };
 var onSignupLoad = function(){
-  $('#signupform').submit(function(){
+  $('#signupform').submit(function(event){
+    event.preventDefault();
     if(validateSignup()){
       console.log('Valid Credentials');
       $('#helpblock').text('Valid Credentials');
